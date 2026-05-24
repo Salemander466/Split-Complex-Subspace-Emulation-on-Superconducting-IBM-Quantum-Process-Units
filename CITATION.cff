@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: Hyperbolic Subspace Quantum Cryptography
+authors:
+  - family-names: Lie
+    given-names: Jacob
+license: AGPL-3.0-or-later OR Commercial
+version: 0.1.0
+message: If you use this software or its validation suite, cite this repository.
