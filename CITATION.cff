@@ -1,8 +1,11 @@
 cff-version: 1.2.0
 title: Hyperbolic Subspace Quantum Cryptography
 authors:
-  - family-names: Lie
-    given-names: Jacob
+  - family-names: Bae
+    given-names: Jacob Won Joon 
+    email: jbe466@gmail.com
+    affiliation: Utrecht University
+    linkedin: https://www.linkedin.com/in/jacob-won-joon-bae-988750208/
 license: AGPL-3.0-or-later OR Commercial
 version: 0.1.0
 message: If you use this software or its validation suite, cite this repository.

@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "test": "Ghost gate hardware channel displacement",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "A 4x4 ghost gate routed the initialized state into the target hidden bitstring channel on real hardware.",
+    "score": "99.3% target-channel recovery; counts {'10': 993, '00': 6, '11': 1}",
+    "status": "pass_with_caveat"
+  },
+  {
+    "id": 2,
+    "test": "End-to-end cryptographic loopback",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "Logical bit ingestion, mapped forward transform, inverse recovery, and readout in one hardware job.",
+    "score": "98.6% recovered bit-1 fidelity; 1.4% leakage",
+    "status": "pass"
+  },
+  {
+    "id": 3,
+    "test": "Arbitrary split-complex stress sweep",
+    "backend": "ibm_fez",
+    "what_was_tested": "Three randomized bit/angle recovery trials using the mapped operator and inverse recovery.",
+    "score": "94.2%, 93.9%, and 98.3% fidelity",
+    "status": "pass"
+  },
+  {
+    "id": 4,
+    "test": "Circuit depth and coherence stability",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "Loopback recovery at programmed depths x2, x4, and x8.",
+    "score": "98.9%, 99.0%, and 98.4% fidelity",
+    "status": "pass"
+  },
+  {
+    "id": 5,
+    "test": "Compiler optimization profile",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "Execution fidelity across Qiskit transpiler optimization levels 0 through 3.",
+    "score": "Level 0: 94.3%; Level 1: 94.2%; Level 2: 98.0%; Level 3: 96.6%",
+    "status": "pass"
+  },
+  {
+    "id": 6,
+    "test": "Crosstalk isolation profile",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "Two-qubit recovery while neighboring qubits were driven with active H/X interference.",
+    "score": "97.2% fidelity; counts {'11': 972, '01': 15, '10': 11, '00': 2}",
+    "status": "pass"
+  },
+  {
+    "id": 7,
+    "test": "Destructive depth-limit stress test",
+    "backend": "ibm_kingston",
+    "what_was_tested": "Programmed forward/reverse depth scaled to 1,000, 10,000, and 100,000 gate pairs.",
+    "score": "98.2%, 98.4%, and 97.8% fidelity",
+    "status": "pass_with_caveat"
+  },
+  {
+    "id": 8,
+    "test": "QEC compression comparison",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "Structured reversible workload compared with unstructured baseline under 300 simulated syndrome extraction cycles.",
+    "score": "Structured: 99.0%; baseline: 63.0%; both reported 0 post-transpile CX",
+    "status": "pass_with_caveat"
+  },
+  {
+    "id": 9,
+    "test": "Adversarial randomized recovery with resource audit",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "Randomized bit/theta, 25 cycles, adversarial barriers and basis switching, plus post-transpile resource audit.",
+    "score": "97.8% fidelity; compiled depth 29; size 48; ops rz/sx/cz/measure/barrier",
+    "status": "pass"
+  },
+  {
+    "id": 10,
+    "test": "Key exchange loop",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "100-stage key-shuffling and authentication loop comparing split-complex and standard binary tracks.",
+    "score": "Split-complex: 98.4%; standard binary: 98.5%",
+    "status": "neutral"
+  },
+  {
+    "id": 11,
+    "test": "Two-qubit ER/EPR-style subspace recovery",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "Two-qubit holographic scrambling, inverse recovery, and target payload reconstruction.",
+    "score": "98.9% traversal/recovery rate",
+    "status": "pass_as_analogy"
+  },
+  {
+    "id": 12,
+    "test": "Four-qubit macro wormhole simulator",
+    "backend": "ibm_kingston",
+    "what_was_tested": "Four-qubit expanded macro recovery to target signature 0000.",
+    "score": "97.1% payload reconstruction fidelity",
+    "status": "pass_as_analogy"
+  },
+  {
+    "id": 13,
+    "test": "Four-qubit adversarial macro stress",
+    "backend": "ibm_kingston",
+    "what_was_tested": "20 adversarial macro-manifold cycles with asynchronous phase barriers and forced physical execution.",
+    "score": "94.2% fidelity; compiled depth 33; size 108",
+    "status": "pass"
+  },
+  {
+    "id": 14,
+    "test": "Dynamic anti-cancellation test",
+    "backend": "ibm_kingston",
+    "what_was_tested": "Mid-circuit conditional branching designed to prevent compiler identity cancellation.",
+    "score": "82.6% fidelity; compiled depth 14; includes if_else operations",
+    "status": "hardest_stress_case"
+  },
+  {
+    "id": 15,
+    "test": "Compiler bridge efficiency benchmark",
+    "backend": "ibm_kingston",
+    "what_was_tested": "Standard trotterized phase track versus gate-sliced split-complex compiler bridge.",
+    "score": "Both tracks 95.0%; 0.0% two-qubit gate savings",
+    "status": "neutral"
+  },
+  {
+    "id": 16,
+    "test": "Statistical error-bar validation",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "2,000-shot run with 2,000 bootstrap resampling iterations.",
+    "score": "Mean 98.051%; sigma +/-0.313%; 95% CI [97.400%, 98.650%]",
+    "status": "pass"
+  },
+  {
+    "id": 17,
+    "test": "QEC scalability net efficiency",
+    "backend": "ibm_marrakesh",
+    "what_was_tested": "150-cycle scaled background workload with post-transpile two-qubit pulse-count comparison.",
+    "score": "Standard: 2 two-qubit pulses; split-complex: 0; 100.0% fewer reported pulses",
+    "status": "pass_with_caveat"
+  }
+]

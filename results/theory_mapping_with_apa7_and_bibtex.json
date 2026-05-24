@@ -1,0 +1,97 @@
+{
+  "project_context": {
+    "title": "Theory Mapping for Split-Complex Subspace Emulation Experiments",
+    "purpose": "This document maps which theories or assumptions were supported, challenged, or partially validated by the experimental QPU results. It does not claim formal proof of new physics."
+  },
+  "challenged_theories_or_assumptions": [
+    {
+      "theory_or_assumption": "Split-complex logic is only mathematical and not executable on physical quantum hardware.",
+      "status": "Challenged",
+      "supporting_experiments": [
+        "Split-Complex Gate Mapping Prototype",
+        "Bell-State Recovery",
+        "End-to-End Recovery Pipeline"
+      ],
+      "experimental_evidence": "Split-complex-inspired mappings were executed reproducibly on IBM superconducting hardware with high recovery fidelity.",
+      "what_is_not_yet_proven": "This does not establish physical split-complex particles or nonstandard quantum mechanics.",
+      "apa7_reference": "Khrennikov, A. (2003). Hyperbolic quantum mechanics. Advances in Applied Clifford Algebras, 13(1), 1\u20139.",
+      "bibtex": "@article{khrennikov2003hyperbolic,\n  title={Hyperbolic quantum mechanics},\n  author={Khrennikov, Andrei},\n  journal={Advances in Applied Clifford Algebras},\n  volume={13},\n  number={1},\n  pages={1--9},\n  year={2003}\n}"
+    },
+    {
+      "theory_or_assumption": "Useful contradiction-tolerant logic cannot run on NISQ hardware.",
+      "status": "Challenged",
+      "supporting_experiments": [
+        "4-State Split-Complex Encoding",
+        "CTC Split Equilibrium",
+        "QELU"
+      ],
+      "experimental_evidence": "Belnap-style contradiction-tolerant logical structures were represented and recovered on real QPUs.",
+      "what_is_not_yet_proven": "No large-scale computational advantage has yet been demonstrated.",
+      "apa7_reference": "Belnap, N. D. (1977). A useful four-valued logic. In Modern uses of multiple-valued logic (pp. 8\u201337). Springer.",
+      "bibtex": "@incollection{belnap1977useful,\n  title={A useful four-valued logic},\n  author={Belnap, Nuel D},\n  booktitle={Modern Uses of Multiple-Valued Logic},\n  pages={8--37},\n  year={1977},\n  publisher={Springer}\n}"
+    },
+    {
+      "theory_or_assumption": "Deep reversible circuits necessarily collapse rapidly on NISQ devices.",
+      "status": "Challenged",
+      "supporting_experiments": [
+        "Destructive Depth-Limit Stress Test"
+      ],
+      "experimental_evidence": "97.8% fidelity remained at 100,000 programmed gate-pair depth.",
+      "what_is_not_yet_proven": "Physical pulse depth and scheduled-duration immunity have not been established.",
+      "apa7_reference": "Preskill, J. (2018). Quantum computing in the NISQ era and beyond. Quantum, 2, 79.",
+      "bibtex": "@article{preskill2018quantum,\n  title={Quantum computing in the NISQ era and beyond},\n  author={Preskill, John},\n  journal={Quantum},\n  volume={2},\n  pages={79},\n  year={2018}\n}"
+    }
+  ],
+  "supported_or_partially_supported_theories": [
+    {
+      "theory": "Deutsch Closed Timelike Curve Consistency",
+      "status": "Partially Supported",
+      "supporting_experiments": [
+        "Deutsch Chronology Loop Consistency Ceiling"
+      ],
+      "experimental_evidence": "The chronology-loop experiment stabilized into a mixed-state equilibrium rather than random collapse under causal-feedback conditions.",
+      "what_is_not_yet_proven": "No physical closed timelike curves or time travel were demonstrated.",
+      "apa7_reference": "Deutsch, D. (1991). Quantum mechanics near closed timelike lines. Physical Review D, 44(10), 3197\u20133217.",
+      "bibtex": "@article{deutsch1991quantum,\n  title={Quantum mechanics near closed timelike lines},\n  author={Deutsch, David},\n  journal={Physical Review D},\n  volume={44},\n  number={10},\n  pages={3197--3217},\n  year={1991}\n}"
+    },
+    {
+      "theory": "Holographic Quantum Error Correction",
+      "status": "Architecturally Supported",
+      "supporting_experiments": [
+        "ER/EPR Traversal Emulator",
+        "Bulk Sabotage Recovery",
+        "Macro Wide-Throat Scaling"
+      ],
+      "experimental_evidence": "Local damage and scrambling still allowed nonlocal recovery of the logical payload.",
+      "what_is_not_yet_proven": "No proof of AdS/CFT, spacetime emergence, or physical wormholes.",
+      "apa7_reference": "Pastawski, F., Yoshida, B., Harlow, D., & Preskill, J. (2015). Holographic quantum error-correcting codes: Toy models for the bulk/boundary correspondence. Journal of High Energy Physics, 2015(6), 149.",
+      "bibtex": "@article{pastawski2015holographic,\n  title={Holographic quantum error-correcting codes: Toy models for the bulk/boundary correspondence},\n  author={Pastawski, Fernando and Yoshida, Beni and Harlow, Daniel and Preskill, John},\n  journal={Journal of High Energy Physics},\n  volume={2015},\n  number={6},\n  pages={149},\n  year={2015}\n}"
+    },
+    {
+      "theory": "Operator-Algebra Quantum Error Correction",
+      "status": "Strongly Related",
+      "supporting_experiments": [
+        "QELU",
+        "Many-Body Sabotage Recovery",
+        "Mirror Containment"
+      ],
+      "experimental_evidence": "Information behaved like recoverable subsystem-style encoding under corruption.",
+      "what_is_not_yet_proven": "Formal operator-algebra code-distance scaling has not yet been measured.",
+      "apa7_reference": "Kribs, D. W., Laflamme, R., Poulin, D., & Lesosky, M. (2005). Operator quantum error correction. Quantum Information & Computation, 6(4), 382\u2013399.",
+      "bibtex": "@article{kribs2005operator,\n  title={Operator quantum error correction},\n  author={Kribs, David W and Laflamme, Raymond and Poulin, David and Lesosky, Michele},\n  journal={Quantum Information \\& Computation},\n  volume={6},\n  number={4},\n  pages={382--399},\n  year={2005}\n}"
+    },
+    {
+      "theory": "Noiseless Subsystems / Decoherence-Free Subspaces",
+      "status": "Potentially Supported",
+      "supporting_experiments": [
+        "Crosstalk Isolation",
+        "Phase-Erasure Horizon",
+        "Many-Body Sabotage Recovery"
+      ],
+      "experimental_evidence": "The mapped subspace showed unusually stable recovery under several noise and sabotage conditions.",
+      "what_is_not_yet_proven": "Controlled noise-channel characterization has not yet been completed.",
+      "apa7_reference": "Lidar, D. A., Chuang, I. L., & Whaley, K. B. (1998). Decoherence-free subspaces for quantum computation. Physical Review Letters, 81(12), 2594\u20132597.",
+      "bibtex": "@article{lidar1998decoherence,\n  title={Decoherence-free subspaces for quantum computation},\n  author={Lidar, Daniel A and Chuang, Isaac L and Whaley, K Birgitta},\n  journal={Physical Review Letters},\n  volume={81},\n  number={12},\n  pages={2594--2597},\n  year={1998}\n}"
+    }
+  ]
+}

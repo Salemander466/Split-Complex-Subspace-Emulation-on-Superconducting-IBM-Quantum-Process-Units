@@ -1,0 +1,76 @@
+{
+  "phase_19_monolithic_qelu_geometry_mining": {
+    "backend": "ibm_marrakesh",
+    "experiment": "Monolithic QELU Geometry Mining",
+    "result_summary": "4-, 8-, 16-, and 32-bit QELU layouts corresponding to 12, 24, 48, and 96 physical qubits executed as monolithic circuit blocks.",
+    "reported_metrics": [
+      {
+        "logical_width_bits": 4,
+        "physical_qubits": 12,
+        "telemetry_radius": 1.0,
+        "phase_distortion_deg": 0.0
+      },
+      {
+        "logical_width_bits": 8,
+        "physical_qubits": 24,
+        "telemetry_radius": 1.0,
+        "phase_distortion_deg": 0.0
+      },
+      {
+        "logical_width_bits": 16,
+        "physical_qubits": 48,
+        "telemetry_radius": 1.0,
+        "phase_distortion_deg": 0.0
+      },
+      {
+        "logical_width_bits": 32,
+        "physical_qubits": 96,
+        "telemetry_radius": 1.0,
+        "phase_distortion_deg": 0.0
+      }
+    ],
+    "interpretation": "Monolithic construction/transpilation/execution feasibility and containment classification.",
+    "caveat": "Original containment metric was permissive; not exact logical word recovery."
+  },
+  "phase_21_qelu_v6_advanced_analytics": {
+    "backend": "ibm_marrakesh",
+    "experiment": "QELU v6.0 Advanced Analytics",
+    "metrics": {
+      "exact_word_recovery_rate": "58.4%",
+      "majority_vote_word_recovery_rate": "17.5%",
+      "global_stabilizer_agreement": "24.2%",
+      "full_register_subspace_containment": "100.0%",
+      "localized_logical_bit_accuracy": [
+        "85.6%",
+        "87.7%",
+        "86.2%",
+        "88.1%"
+      ]
+    },
+    "interpretation": "Locally robust but globally decoder-limited; failure mode is synchronization/reconstruction rather than local collapse.",
+    "caveat": "Not yet scalable fault-tolerant computing."
+  },
+  "phase_22_cross_backend_baseline_advantage": {
+    "experiment": "Breakthrough Validation Suite Cross-Backend Replication",
+    "results": [
+      {
+        "backend": "ibm_fez",
+        "strongest_case": "depth=10, theta=90, vs standard_phase_baseline",
+        "split_fidelity": "97.79%",
+        "baseline_fidelity": "0.33%",
+        "delta": "+97.46 percentage points",
+        "z_score": "+617.62"
+      },
+      {
+        "backend": "ibm_marrakesh",
+        "strongest_case": "depth=50, theta=90, vs standard_phase_baseline",
+        "split_fidelity": "97.11%",
+        "baseline_fidelity": "0.23%",
+        "delta": "+96.88 percentage points",
+        "z_score": "+556.02"
+      }
+    ],
+    "interpretation": "Backend-replicated resonant baseline advantage in selected theta-depth regimes.",
+    "caveat": "Simulator resistance, new physics, and Born-rule violation remain unproven because hardware-vs-ideal TVD did not populate."
+  }
+}
